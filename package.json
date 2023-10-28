@@ -1,0 +1,18 @@
+{
+  "name": "robot",
+  "version": "1.0.0",
+  "description": "We have installed a robot in our warehouse and now we need to be able to send commands to control it. We need you to implement the primary control mechanism.",
+  "main": "the warehouse then the following commands will move it to the middle of the warehouse.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  }
+}
