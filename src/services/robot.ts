@@ -1,6 +1,12 @@
 
 class Robot {
-  constructor(warehouseWidth, warehouseHeight) {
+  x: number;
+  y: number;
+  shape: string;
+  warehouseWidth: number;
+  warehouseHeight: number;
+
+  constructor(warehouseWidth: number, warehouseHeight: number) {
       this.x = 0; // initial x-coordinate
       this.y = 0; // initial y-coordinate
       this.shape = '& ';
@@ -8,7 +14,7 @@ class Robot {
       this.warehouseHeight = warehouseHeight;
   }
 
-  move(command) {
+  move(command : string) {
       switch (command) {
           case 'N':
               if (this.y < this.warehouseHeight - 1) {
@@ -40,4 +46,4 @@ class Robot {
   }
 }
 
-module.exports = Robot;
+export default Robot;

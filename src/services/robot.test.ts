@@ -1,4 +1,4 @@
-const Robot = require('./robot');
+import Robot from './robot';
 
 describe('Robot class test', () => {
   test('move method should update the position correctly', () => {

@@ -1,6 +1,6 @@
 const readline = require('readline');
-const Robot = require('./services/robot');
-const WarehouseMap = require('./services/warehouseMap');
+import Robot from './services/robot';
+import WarehouseMap from './services/warehouseMap';
 
 const warehouseWidth = 10;
 const warehouseHeight = 10;
@@ -17,7 +17,7 @@ warehouseMap.printWarehouseMap();
 rl.setPrompt('Enter the next command (N, S, E, W): ');
 rl.prompt();
 
-rl.on('line', (input) => {
+rl.on('line', (input: string) => {
     robot.move(input);
     warehouseMap.printWarehouseMap();
     rl.prompt();

@@ -1,11 +1,12 @@
-const WarehouseMap = require('./warehouseMap');
-const Robot = require('./robot');
+import WarehouseMap from './warehouseMap';
+import Robot from './robot';
 
 describe('WarehouseMap class', () => {
   test('printWarehouseMap method should display the map with the robot in the correct position', () => {
     const warehouseWidth = 5;
     const warehouseHeight = 5;
     const robot = new Robot(warehouseWidth, warehouseHeight);
+    
     const warehouseMap = new WarehouseMap(warehouseWidth, warehouseHeight, robot);
     // Mock console.log
     const consoleLogSpy = jest.spyOn(console, 'log').mockImplementation(() => {}); 

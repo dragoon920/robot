@@ -1,5 +1,12 @@
+
+import Robot from './robot';
+
 class WarehouseMap {
-  constructor(warehouseWidth, warehouseHeight, robot) {
+  warehouseWidth: number;
+  warehouseHeight: number;
+  robot:Robot;
+
+  constructor(warehouseWidth: number, warehouseHeight:number, robot:Robot) {
       this.warehouseWidth = warehouseWidth;
       this.warehouseHeight = warehouseHeight;
       this.robot = robot;
@@ -21,4 +28,4 @@ class WarehouseMap {
   }
 }
 
-module.exports = WarehouseMap;
+export default WarehouseMap;
