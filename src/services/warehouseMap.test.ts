@@ -15,11 +15,11 @@ describe('WarehouseMap class', () => {
     robot.move('E');
     warehouseMap.printWarehouseMap(); 
 
-    expect(consoleLogSpy).toHaveBeenNthCalledWith(1, '_ _ _ _ _ ');
-    expect(consoleLogSpy).toHaveBeenNthCalledWith(2, '_ _ _ _ _ ');
-    expect(consoleLogSpy).toHaveBeenNthCalledWith(3, '_ _ _ _ _ ');
-    expect(consoleLogSpy).toHaveBeenNthCalledWith(4, '_ & _ _ _ ');
-    expect(consoleLogSpy).toHaveBeenNthCalledWith(5, '_ _ _ _ _ ');
+    expect(consoleLogSpy).toHaveBeenNthCalledWith(1, '. . . . .');
+    expect(consoleLogSpy).toHaveBeenNthCalledWith(2, '. . . . .');
+    expect(consoleLogSpy).toHaveBeenNthCalledWith(3, '. . . . .');
+    expect(consoleLogSpy).toHaveBeenNthCalledWith(4, '. & . . .');
+    expect(consoleLogSpy).toHaveBeenNthCalledWith(5, '. . . . .');
     consoleLogSpy.mockRestore(); 
   });
 });

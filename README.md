@@ -30,7 +30,7 @@ Run `npm install` from the root folder to install all the libraries.
 
 ### Run app in the local
 
-1. Run `npx ts-node src/app.ts` from root folder.
+1. Run `npm run local` from root folder.
 
 ### Run test in the local
 

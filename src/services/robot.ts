@@ -8,8 +8,8 @@ class Robot {
 
   constructor(warehouseWidth: number, warehouseHeight: number) {
       this.x = 0; // initial x-coordinate
-      this.y = 0; // initial y-coordinate
-      this.shape = '& ';
+      this.y = warehouseHeight -1; // initial y-coordinate
+      this.shape = '&';
       this.warehouseWidth = warehouseWidth;
       this.warehouseHeight = warehouseHeight;
   }
@@ -17,13 +17,13 @@ class Robot {
   move(command : string) {
       switch (command) {
           case 'N':
-              if (this.y < this.warehouseHeight - 1) {
-                  this.y++;
+              if (this.y > 0) {
+                this.y--;
               }
               break;
           case 'S':
-              if (this.y > 0) {
-                  this.y--;
+              if (this.y < this.warehouseHeight - 1) {
+                this.y++;
               }
               break;
           case 'E':
