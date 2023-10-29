@@ -1,17 +1,17 @@
-const warehouseWidth = 10;
-const warehouseHeight = 10;
 
 class Robot {
-  constructor() {
+  constructor(warehouseWidth, warehouseHeight) {
       this.x = 0; // initial x-coordinate
       this.y = 0; // initial y-coordinate
       this.shape = '& ';
+      this.warehouseWidth = warehouseWidth;
+      this.warehouseHeight = warehouseHeight;
   }
 
   move(command) {
       switch (command) {
           case 'N':
-              if (this.y < warehouseHeight - 1) {
+              if (this.y < this.warehouseHeight - 1) {
                   this.y++;
               }
               break;
@@ -21,7 +21,7 @@ class Robot {
               }
               break;
           case 'E':
-              if (this.x < warehouseWidth - 1) {
+              if (this.x < this.warehouseWidth - 1) {
                   this.x++;
               }
               break;

@@ -5,7 +5,7 @@ const WarehouseMap = require('./services/warehouseMap');
 const warehouseWidth = 10;
 const warehouseHeight = 10;
 
-const robot = new Robot();
+const robot = new Robot(warehouseWidth, warehouseHeight);
 const warehouseMap = new WarehouseMap(warehouseWidth, warehouseHeight, robot);
 
 const rl = readline.createInterface({
