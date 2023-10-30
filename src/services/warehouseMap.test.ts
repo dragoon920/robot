@@ -5,15 +5,15 @@ describe('WarehouseMap class', () => {
   test('printWarehouseMap method should display the map with the robot in the correct position', () => {
     const warehouseWidth = 5;
     const warehouseHeight = 5;
+
     const robot = new Robot(warehouseWidth, warehouseHeight);
-    
-    const warehouseMap = new WarehouseMap(warehouseWidth, warehouseHeight, robot);
+    const warehouseMap = new WarehouseMap(warehouseWidth, warehouseHeight);
     // Mock console.log
     const consoleLogSpy = jest.spyOn(console, 'log').mockImplementation(() => {}); 
     
-    robot.move('N');
-    robot.move('E');
-    warehouseMap.printWarehouseMap(); 
+    robot.action('N');
+    robot.action('E');
+    warehouseMap.printWarehouseMap(robot); 
 
     expect(consoleLogSpy).toHaveBeenNthCalledWith(1, '. . . . .');
     expect(consoleLogSpy).toHaveBeenNthCalledWith(2, '. . . . .');
