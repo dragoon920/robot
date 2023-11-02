@@ -1,8 +1,10 @@
 import Robot from './robot';
+import Crate from './crate';
 
 describe('Robot class test', () => {
   test('move method should update the position correctly', () => {
-    const robot = new Robot(3, 3);
+    let crates = [new Crate(2, 1), new Crate(1,2)]
+    const robot = new Robot(3, 3, crates);
     robot.action('N');
     expect(robot.getPosition()).toBe('(0,1)');
 
@@ -17,7 +19,8 @@ describe('Robot class test', () => {
   });
 
   test('move method should not allow the robot to move outside the warehouse boundary', () => {
-    const robot = new Robot(3, 3);
+    let crates = [new Crate(2, 1), new Crate(1,2)]
+    const robot = new Robot(3, 3, crates);
     robot.action('S');
     expect(robot.getPosition()).toBe('(0,2)');
 

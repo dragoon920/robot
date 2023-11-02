@@ -1,16 +1,17 @@
 const readline = require('readline');
 import Robot from './services/robot';
+import Crate from './services/crate';
 import WarehouseMap from './services/warehouseMap';
 
 readline.emitKeypressEvents(process.stdin);
 process.stdin.setRawMode(true);
 const warehouseWidth = 10;
 const warehouseHeight = 10;
-
-const robot = new Robot(warehouseWidth, warehouseHeight);
+let crates = [new Crate(4,5), new Crate(8,9)]
+const robot = new Robot(warehouseWidth, warehouseHeight, crates);
 const warehouseMap = new WarehouseMap(warehouseWidth, warehouseHeight);
 
-warehouseMap.printWarehouseMap(robot);
+warehouseMap.printWarehouseMap(robot, crates);
 
 process.stdin.on('keypress', (str, key) => {
   if (key.name === 'x') {
@@ -25,7 +26,8 @@ process.stdin.on('keypress', (str, key) => {
     } else {
       // Perform other actions based on the input character
       robot.action(str);
-      warehouseMap.printWarehouseMap(robot);
+      crates = robot.getCrates();
+      warehouseMap.printWarehouseMap(robot, crates);
     }
   }
 });
